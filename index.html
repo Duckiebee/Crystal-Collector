@@ -14,23 +14,21 @@
 			background-size: 100%;
 		}
 
-		
-		#directions, #wins, #totalScoreBox, #lossBox, #winsBox, #gameNumber, #totalScore {
+
+		#directions, #totalScoreBox, #gameNumber, #totalScore, #winLoseBox {
 			background-image: url("assets/images/RainbowBackground.jpeg");
 			background-size: 100%;
 			margin: 20px;
 			color: white;
-
 		}
-		#winLoseBox {
-			width: 40%;
-
-		}
-		#gameNumber, #totalScore {
+		
+		#gameNumber, #totalScore, #winLoseBox  {
 			width: 45%;
+			margin-left: 30%;
 
 		}
 
+		
 		
 	</style>
 </head>
@@ -46,7 +44,7 @@
 
 		<!-- directions -->
 		<div class="row" id="directions">
-			<div class="col-md-12 col-xs-12 text-center">
+			<div class="col-md-12 col-xs-12 center-block">
 				<p class="font-weight-bold"><b>You will be given a random number at the start of the game.
 
 					There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
@@ -74,32 +72,36 @@
 			</div>
 		</div>
 		<div class="row" id="gameNumber">
-			<div class="col-md-12 col-xs-12 text-center">
+			<div class="col-md-12 col-xs-12 center-block text-center">
 				<h4>Game Number: </h4><div id="randomNumber"></div>
 			</div>
 		</div>
 
-	<div class="row">
-		<div class="col-xs-12 text-center" id=totalScore>
-			<h4>Total Score: </h4><div id="totalScoreBox">0</div>
-		</div>
-	</div>
-</div>
-
 		<div class="row">
-			<div id="winLoseBox">
-
-				<div class="col-xs-6 text-center" id=winsBox>
-					<h4>Wins: </h4><div id="wins">0</div>
-				</div>
-			
-
-			<div class="col-xs-6 text-center" id=lossBox>
-				<h4>Loss: </h4><div id="loss">0</div>
+			<div class="col-xs-12 text-center" id=totalScore>
+				<h4>Total Score: </h4><div id="totalScoreBox">0</div>
 			</div>
 		</div>
-		</div>
 
-<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+		<div class="row">
+			<div class="col-xs-12 center-block text-center" id="winLoseBox">
+
+				<!-- <div class="col-xs-4 center-block text-center" id=winsBox> -->
+				<h4 id=winsBox > Wins: </h4> 
+				<p class="winner"> 0 </p>
+				<!-- <div id="wins">0</div> -->
+				
+
+
+				<!-- <div class="col-xs-4 center-block text-center " id=lossBox> -->
+				<h4 id=lossBox > Loss: </h4>
+				<p class="loser"> 0 </p> <!-- <div  --><!-- </div> -->
+			</div>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

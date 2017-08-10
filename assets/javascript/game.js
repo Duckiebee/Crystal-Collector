@@ -34,14 +34,14 @@ function processSelection(crystal) {
 		totalScore = 0;
 		getRandomNumbers();
 		wins = wins + 1;
-		$("#wins").html(wins);
+		$(".winner").html(wins);
 	}
 
 	if (totalScore > randomNumber) {
 		totalScore = 0;
 		getRandomNumbers();
 		loss = loss + 1;
-		$("#loss").html(loss);
+		$(".loser").html(loss);
 	}
 
 	$("#totalScoreBox").html(totalScore);
