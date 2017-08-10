@@ -8,6 +8,31 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>Crystal Game- Week 4 HW</title>
+	<style>
+		body {
+			background-image: url("assets/images/Background.jpeg");
+			background-size: 100%;
+		}
+
+		
+		#directions, #wins, #totalScoreBox, #lossBox, #winsBox, #gameNumber, #totalScore {
+			background-image: url("assets/images/RainbowBackground.jpeg");
+			background-size: 100%;
+			margin: 20px;
+			color: white;
+
+		}
+		#winLoseBox {
+			width: 40%;
+
+		}
+		#gameNumber, #totalScore {
+			width: 45%;
+
+		}
+
+		
+	</style>
 </head>
 <body>
 	<div class="container-fluid">
@@ -15,14 +40,14 @@
 		<!-- Title -->
 		<div class="row">
 			<div class="col-md-12 col-xs-12 text-center">
-				<h1>Crystal Collector Game</h1>
+				<h1 class="page-header">Crystal Collector Game</h1>
 			</div>
 		</div>
 
 		<!-- directions -->
-		<div class="row">
+		<div class="row" id="directions">
 			<div class="col-md-12 col-xs-12 text-center">
-				<p>You will be given a random number at the start of the game.
+				<p class="font-weight-bold"><b>You will be given a random number at the start of the game.
 
 					There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
 
@@ -31,7 +56,7 @@
 					The value of each crystal is hidden from you until you click on it.
 
 					Each time when the game starts, the game will change the values of each crystal.
-				</p>
+				</b></p>
 			</div>
 		</div>
 		<div class="row">
@@ -48,32 +73,33 @@
 				<button id="blue"><img id="blue" src="assets/images/BlueCrystal.png"></button>				
 			</div>
 		</div>
-		
-		<div class="row">
-			<div class="col-md-4 col-xs-4 text-center">
+		<div class="row" id="gameNumber">
+			<div class="col-md-12 col-xs-12 text-center">
 				<h4>Game Number: </h4><div id="randomNumber"></div>
 			</div>
 		</div>
-		<div class="row">
-			<div id="winLoseBox">
-					<div class="row">
-						<div class="col-xs-4 text-center">
-							<h4>Wins: </h4><div id="wins">0</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-4 text-center">
-							<h4>Loss: </h4><div id="loss">0</div>
-						</div>
-					</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-6 text-center">
-				<h4>Total Score: </h4><div id="totalScoreBox">0</div>
-			</div>
+
+	<div class="row">
+		<div class="col-xs-12 text-center" id=totalScore>
+			<h4>Total Score: </h4><div id="totalScoreBox">0</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+</div>
+
+		<div class="row">
+			<div id="winLoseBox">
+
+				<div class="col-xs-6 text-center" id=winsBox>
+					<h4>Wins: </h4><div id="wins">0</div>
+				</div>
+			
+
+			<div class="col-xs-6 text-center" id=lossBox>
+				<h4>Loss: </h4><div id="loss">0</div>
+			</div>
+		</div>
+		</div>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
