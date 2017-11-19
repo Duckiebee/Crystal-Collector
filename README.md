@@ -1,5 +1,5 @@
-#Crystal Collector Game
-#Technologies used: HTML, JavaScript, JQuery
+Crystal Collector Game
+Technologies used: HTML, JavaScript, JQuery
 
 This is a guessing game using numbers.
 There will be four crystals displayed as buttons on the page.
